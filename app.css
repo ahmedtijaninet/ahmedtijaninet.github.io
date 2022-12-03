@@ -44,7 +44,8 @@ body {
      font-weight: 300;
      color: #fff;
      background: #212121;
-     -webkit-font-smoothing: antialiased
+     -webkit-font-smoothing: antialiased;
+     text-align: center
 }
 
 body.cursor-hidden::-webkit-scrollbar {
