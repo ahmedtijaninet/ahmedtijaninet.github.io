@@ -1,0 +1,252 @@
+@font-face {
+     font-family: themify;
+     src: url(../fonts/themify.eot);
+     src: url(../fonts/themify.eot?#iefix-fvbane) format('embedded-opentype'), url(../fonts/themify.woff) format('woff'), url(../fonts/themify.ttf) format('truetype'), url(../fonts/themify.svg?-fvbane#themify) format('svg');
+     font-weight: 400;
+     font-style: normal
+}
+
+[class*=" ti-"],
+[class^=ti-] {
+     font-family: themify;
+     font-style: normal;
+     font-weight: 400;
+     font-variant: normal;
+     text-transform: none;
+     line-height: 1;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale
+}
+
+
+
+
+html {
+     font-size: 10px;
+     font-size: calc(100vw / 192)
+}
+
+@media(max-width:800px) {
+     html {
+          font-size: 8px
+     }
+}
+
+@media(max-width:500px) {
+     html {
+          font-size: 6px
+     }
+}
+
+body {
+     font-size: 1.4rem;
+     font-family: 'Source Sans Pro', sans-serif;
+     font-weight: 300;
+     color: #fff;
+     background: #212121;
+     -webkit-font-smoothing: antialiased
+}
+
+body.cursor-hidden::-webkit-scrollbar {
+     display: none
+}
+
+body.cursor-hidden {
+     -ms-overflow-style: none;
+     scrollbar-width: none
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+     letter-spacing: -.005em;
+     line-height: 1.1em;
+     margin-top: 0em;
+     margin-bottom: 0;
+     font-weight: 300;
+     font-family: 'Source Sans Pro', sans-serif
+}
+
+h1 {
+     font-size: 10rem;
+     line-height: 1em;
+     font-weight: 200
+}
+
+h2 {
+     font-size: 6.5rem;
+     font-weight: 200
+}
+
+h3 {
+     font-size: 5rem
+}
+
+h4 {
+     font-size: 4rem
+}
+
+h5 {
+     font-size: 3.4rem;
+     line-height: 1.18em
+}
+
+h6 {
+     font-size: 3rem;
+     font-weight: 500
+}
+
+p {
+     font-size: 3.4rem;
+     line-height: 1.4em;
+     letter-spacing: -.005em;
+     font-weight: 300;
+     margin-top: 0;
+     margin-bottom: 0rem;
+     color: #7c7c7c;
+     font-family: 'Source Sans Pro', sans-serif
+}
+
+p.small {
+     font-size: 2.1rem;
+     line-height: 1.48em;
+     letter-spacing: 0;
+     font-weight: 400
+}
+
+p.tag {
+     font-size: 1.3rem;
+     letter-spacing: .14em;
+     font-weight: 700;
+     color: #fff
+}
+
+a,
+a:hover,
+a:focus {
+     cursor: pointer;
+     -webkit-transition: all 150ms ease;
+     -o-transition: all 150ms ease;
+     transition: all 150ms ease;
+     text-decoration: none;
+     outline: none !important;
+     outline-color: unset !important;
+     -webkit-tap-highlight-color: transparent;
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     color: #fff
+}
+
+
+.loading-screen {
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     z-index: 200;
+     left: 0;
+     background: #161616;
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+     -webkit-box-orient: vertical;
+     -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+     flex-direction: column;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     will-change: transform
+}
+
+.loading-screen .inner {
+     overflow: hidden
+}
+
+.loading-screen .text-box {
+     overflow: hidden;
+     margin-bottom: .6rem
+}
+
+.loading-screen .line-frame {
+     overflow: hidden;
+     height: 1px;
+     width: 100%;
+     position: relative
+}
+
+.loading-screen .line {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     -webkit-transform: translate(-50%, -50%);
+     -ms-transform: translate(-50%, -50%);
+     transform: translate(-50%, -50%);
+     background: rgba(255, 255, 255, .6);
+     -webkit-animation-name: loader_animation;
+     animation-name: loader_animation;
+     will-change: transform;
+     -webkit-animation-duration: 2s;
+     animation-duration: 2s;
+     -webkit-animation-iteration-count: infinite;
+     animation-iteration-count: infinite;
+     -webkit-animation-play-state: running;
+     animation-play-state: running;
+     -webkit-animation-timing-function: cubic-bezier(.4, .1, .2, 1);
+     animation-timing-function: cubic-bezier(.4, .1, .2, 1)
+}
+
+@-webkit-keyframes loader_animation {
+     0% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0)
+     }
+
+     48% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0)
+     }
+
+     52% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0)
+     }
+
+     to {
+          -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0)
+     }
+}
+
+@keyframes loader_animation {
+     0% {
+          -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0)
+     }
+
+     48% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0)
+     }
+
+     52% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0)
+     }
+
+     to {
+          -webkit-transform: translate3d(100%, 0, 0);
+          transform: translate3d(100%, 0, 0)
+     }
+}
